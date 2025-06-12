@@ -1,6 +1,7 @@
 [client]
 user=root
-password=rootroot
+password=rootpass
 host=127.0.0.1
+port:3307
 database=genes_small
 raise_on_warnings=True

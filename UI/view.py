@@ -53,7 +53,7 @@ class View(ft.UserControl):
         self.btn_path = ft.ElevatedButton(text="Cammino",
                                           tooltip="Trova cammino ottimo",
                                           on_click=self._controller.handle_path)
-
+        self._controller.fillDD()
         row1 = ft.Row([self.dd_min_ch, self.dd_max_ch, self.btn_graph, self.dd_localization,
                        self.btn_dettagli, self.btn_path],
                       alignment=ft.MainAxisAlignment.SPACE_EVENLY)
@@ -90,6 +90,7 @@ class View(ft.UserControl):
                       alignment=ft.MainAxisAlignment.SPACE_EVENLY,
                       spacing=50)
         self._page.controls.append(row2)
+
         self._page.update()
 
     @property
